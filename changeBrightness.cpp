@@ -29,13 +29,6 @@ int main(int argc, char** argv)
     Mat imageBrighnessLow100;
     image.convertTo(imageBrighnessLow100, -1, 1, -100); //decrease the brightness by 100
 
-    //Defining window names for above images
-    String windowNameOriginalImage = "Original Image";
-    String windowNameBrightnessHigh50 = "Brightness Increased by 50";
-    String windowNameWithBrightnessHigh100 = "Brightness Increased by 100";
-    String windowNameBrightnessLow50 = "Brightness Decreased by 50";
-    String windowNameBrightnessLow100 = "Brightness Decreased by 100";
-
     //Create and open windows for above images
     namedWindow(windowNameOriginalImage, WINDOW_NORMAL);
     namedWindow(windowNameBrightnessHigh50, WINDOW_NORMAL);
