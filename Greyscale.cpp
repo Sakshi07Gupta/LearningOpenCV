@@ -9,7 +9,7 @@ using namespace std;
 using namespace cv;
 
 
-int main(int argc, char* argv)
+int main()
 {
 		Mat img;
 	// load the image
