@@ -6,13 +6,13 @@ using namespace cv;
 Mat src, dst;
 int top, bottom, left, right;
 int borderType = BORDER_CONSTANT;
-const char* window_name = "copyMakeBorder Demo";
-//RNG rng(1);
+const char* window_name = "Border";
+RNG rng(1);
 int main()
 {
     Mat src= imread("E:\\OPENCVr\\opencv\\Chapter1\\thor.jpg", IMREAD_COLOR);
     // Brief how-to for this program
-    printf("\n \t copyMakeBorder Demo: \n");
+    printf("\n \t Border \n");
     printf("\t -------------------- \n");
     printf(" ** Press 'c' to set the border to a random constant value \n");
     printf(" ** Press 'r' to set the border to be replicated \n");
@@ -23,8 +23,8 @@ int main()
     left = (int)(0.05 * src.cols); right = left;
     for (;;)
     {
-      //  Scalar value(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
-        Scalar value(234,221,56);
+       Scalar value(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
+        // Scalar value(234,221,56  );
         copyMakeBorder(src, dst, top, bottom, left, right, borderType, value);
         imshow(window_name, dst);
         char c = (char)waitKey(500);
