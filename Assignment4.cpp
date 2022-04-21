@@ -1,3 +1,5 @@
+# Assignment4:- In this assignment We have to detect the color of the subject in the image through HSV
+
 #include<opencv2/imgcodecs.hpp>
 #include<opencv2/highgui.hpp>
 #include<opencv2/imgproc.hpp>
